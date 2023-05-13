@@ -1,0 +1,28 @@
+from matplotlib import pyplot
+# importing package
+import matplotlib.pyplot as plt
+import numpy as np
+
+tamiz = [25.4, 19.1,  12.7, 9.52, 4.75, 2.0, 0.6, 0.43, 0.25, 0.15, 0.074, 0]
+pasa = [100, 99.74, 96.77, 87.5, 77.84, 57, 37.22, 26.76, 17.84, 9.24, 4.35, 1.2 ] 
+
+plt.scatter(tamiz,pasa)
+plt.plot(tamiz,pasa, label="-")
+ 
+# escala logaritmica
+pyplot.xscale('log')
+ 
+ # sentencia que invierte el eje x
+pyplot.gca().invert_xaxis()
+ 
+# grilla log en eje x
+pyplot.grid(True, which="minor", linestyle='--')
+ 
+# grilla normal en eje y
+pyplot.grid(True, linestyle='-')
+
+#Etiquetas
+plt.xlabel("Tamaño de particula (mm)",fontsize=10)
+plt.ylabel("% Que pasa",fontsize=10)
+ 
+pyplot.show()
