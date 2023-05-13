@@ -1,0 +1,61 @@
+Tamiz = pd.Series([
+    '1"',
+    '3/4"',
+    '1/2"',
+    '3/8"',
+    'Nº 4',
+    'Nº 10',
+    'Nº 30',
+    'Nº 40',
+    'Nº 60',
+    'Nº 100',
+    'Nº 200',
+    'Fondo',
+    'TOTAL'
+])
+
+Apertura = pd.Series([
+    25.4, 
+    19.1,
+    12.7,
+    9.52,
+    4.75,
+    2.00,
+    0.60,
+    0.43,
+    0.25,
+    0.15, 
+    0.074,
+    '----',
+    '----'
+
+])
+
+Retenido =pd.Series([
+    12.5, 
+    32.8,
+    50.9,
+    89.5,
+    92.8,
+    108.8,
+    205.8,
+    216.8,
+    100.5,
+    96.4, 
+    30.8,
+    2.8,
+    1040.4 #Este valor corresponde a la suma total de los pesos retenidos, por favor tener en cuenta.
+
+])
+
+Estructura = pd.DataFrame({
+    'Tamiz':Tamiz,
+    'Apertura (mm)' : Apertura ,
+    'Peso Retenido (g)' : Retenido,
+    'Retenido (%)' : (Retenido/1040.4)*100 #El valor en el denominador es el peso total de la muestra, cambiarlo al cambiar los valores de la tabla.
+
+})
+
+#Con valores de porcentaje retenido, sumar total manualmente e ingresar datos en la curva granulométrica.
+
+print(Estructura)
