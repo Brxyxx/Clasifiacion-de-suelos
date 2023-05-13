@@ -1,0 +1,228 @@
+#Porcentaje de suelo que pasa Tamiz N 200 (%)
+a = int(input("Ingrese porcentaje de suelo que pasa Tamiz N 200 (%): "))
+
+if a < 50:
+  print("Suelo con particulas gruesas")
+
+  #Porcentaje de suelo de 'a' que pasa Tamiz N 4 (%)
+  b = int(input("Porcentaje de suelo de 'a' que pasa Tamiz N 4 (%): "))
+
+  if b < 50:
+    print("El suelo corresponde a GRAVAS")
+
+    #Porcentaje de suelo de 'b' que pasa Tamiz N 200 (%)
+    c = int(input("Porcentaje de suelo de 'b' que pasa Tamiz N 200 (%): "))
+
+    if c < 5:
+      print("Ingrese porfavor los valores de Cu y Cc para continuar la clasificación: ")
+
+      #Coeficiente de uniformidad
+      cu= int(input("Coeficiente de uniformidad: "))
+
+      #Coeficiente de curvatura
+      cc= int(input("Coeficiente de curvatura: "))
+      
+      if cu >= 4 and 1 <= cc <= 3: 
+        print("EL SUELO CORRESPONDE A UN TIPO DE SUELO CON GRAVA BIEN GRADADA (GW) ")
+
+      elif cu < 4 and (1 > cc or cc > 3):
+        print("EL SUELO CORRESPONDE A UN TIPO DE SUELO CON GRAVA MAL GRADADA (GP) ")
+    
+    elif 5 <= c <= 12:
+      print("Ingrese porfavor los valores de Cu y Cc para continuar la clasificación: ")
+
+      #Coeficiente de uniformidad
+      cu= int(input("Coeficiente de uniformidad: "))
+
+      #Coeficiente de curvatura
+      cc= int(input("Coeficiente de curvatura: "))
+
+      if cu >= 4 and 1 <= cc <= 3: 
+        print("Ingrese porfavor el valor de IP sobre la linea A para continuar la clasificación (%): ")
+
+        #Indice de plasticidad (%)
+        IP= int(input("Indice de plasticidad sobre la linea A (%): "))
+        
+        if 4 <= IP <= 7:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE GRAVA BIEN GRADADA CON LIMOS (GW-GM) ")
+         
+        else:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE GRAVA BIEN GRADADA CON ARCILLA (GW-GC) ")
+
+      elif cu < 4 and (1 > cc or cc > 3):
+        print("Ingrese porfavor el valor de IP sobre la linea A para continuar la clasificación (%): ")
+
+        #Indice de plasticidad (%)
+        IP= int(input("Indice de plasticidad sobre la linea A (%): "))
+        
+        if 4 <= IP <= 7:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE GRAVA MAL GRADADA CON LIMOS (GP-GM) ")
+         
+        else:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE GRAVA MAL GRADADA CON ARCILLA (GP-GC) ")
+
+    elif c > 12:
+      print("Ingrese porfavor el valor de IP para continuar la clasificación (%): ")
+
+      #Indice de plasticidad (%)
+      IP= int(input("Indice de plasticidad (%): "))
+
+      if IP < 4:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE GRAVA LIMOSA (GM) ")
+        
+      elif IP > 7:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE GRAVA ARCILLOSA (GC) ")
+
+      elif 4 <= IP <= 7:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE GRAVA PROBABLEMENTE BIEN O MAL GRADADA CON LIMOS O ARCILLAS(GW-GP), REVISAR NUEVAMENTE 'Porcentaje de suelo de 'b' que pasa Tamiz N 200 (%)' ")
+
+  elif b >= 50:
+    print("El suelo corresponde a ARENAS")
+
+    #Porcentaje de suelo de 'b' que pasa Tamiz N 200 (%)
+    c = int(input("Porcentaje de suelo de 'b' que pasa Tamiz N 200 (%): "))
+
+    if c < 5:
+      print("Ingrese porfavor los valores de Cu y Cc para continuar la clasificación: ")
+
+      #Coeficiente de uniformidad
+      cu= int(input("Coeficiente de uniformidad: "))
+
+      #Coeficiente de curvatura
+      cc= int(input("Coeficiente de curvatura: "))
+      
+      if cu >= 6 and 1 <= cc <= 3: 
+        print("EL SUELO CORRESPONDE A UN TIPO DE SUELO CON ARENA BIEN GRADADA (SW) ")
+
+      elif cu < 6 and (1 > cc or cc > 3):
+        print("EL SUELO CORRESPONDE A UN TIPO DE SUELO CON ARENA MAL GRADADA (SP) ")
+    
+    elif 5 <= c <= 12:
+      print("Ingrese porfavor los valores de Cu y Cc para continuar la clasificación: ")
+
+      #Coeficiente de uniformidad
+      cu= int(input("Coeficiente de uniformidad: "))
+
+      #Coeficiente de curvatura
+      cc= int(input("Coeficiente de curvatura: "))
+
+      if cu >= 6 and 1 <= cc <= 3: 
+        print("Ingrese porfavor el valor de IP en zona sombreada para continuar la clasificación (%): ")
+
+        #Indice de plasticidad (%)
+        IP= int(input("Indice de plasticidad en zona sombreada (%): "))
+        
+        if 4 <= IP <= 7:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARENA BIEN GRADADA CON LIMOS (SW-SM) ")
+         
+        else:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARENA BIEN GRADADA CON ARCILLA (SW-SC) ")
+
+      elif cu < 6 and (1 > cc or cc > 3):
+        print("Ingrese porfavor el valor de IP en zona sombreada para continuar la clasificación (%): ")
+
+        #Indice de plasticidad (%)
+        IP= int(input("Indice de plasticidad en zona sombreada (%): "))
+        
+        if 4 < IP < 7:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARENA MAL GRADADA CON LIMOS (SP-SM) ")
+         
+        else:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARENA MAL GRADADA CON ARCILLA (SP-SC) ")
+
+    elif c > 12:
+      print("Ingrese porfavor el valor de IP para continuar la clasificación (%): ")
+
+      #Indice de plasticidad (%)
+      IP= int(input("Indice de plasticidad (%): "))
+
+      if IP < 4:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARENA LIMOSA (SM) ")
+        
+      elif IP > 7:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARENA ARCILLOSA (SC) ")
+
+      elif 4 <= IP <= 7:
+         print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARENA PROBABLEMENTE BIEN O MAL GRADADA CON LIMOS O ARCILLAS (SW-SP), REVISAR NUEVAMENTE 'Porcentaje de suelo de 'b' que pasa Tamiz N 200 (%)' ")
+
+
+
+elif a >= 50:
+  print("Suelo con particulas finas")
+
+  #Porcentaje de Limite liquido que contiene el suelo (%)
+  LL = int(input("Porcentaje de Limite liquido que contiene el suelo (%): "))
+  
+  if LL < 50:
+    print("Ingrese porfavor el valor de IP: ")
+    
+    #Indice de plasticidad (%)
+    IP= int(input("Indice de plasticidad (%): "))
+    
+    if IP < 4:
+      print("Ingrese porcentaje de suelo que pasa Tamiz N 200 para continuar clasificación: ")
+      
+      #Porcentaje de suelo que pasa Tamiz N 200 (%)
+      d = int(input("Porcentaje de suelo que pasa Tamiz N 200: "))
+      
+      if d < 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE LIMOS (ML) ")
+
+      elif d >= 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE LIMOS ARENOSOS (ML) ")
+        
+    elif 4 <= IP <= 7:
+      print("Ingrese porcentaje de suelo que pasa Tamiz N 200 para continuar clasificación: ")
+      
+      #Porcentaje de suelo que pasa Tamiz N 200 (%)
+      d = int(input("Porcentaje de suelo que pasa Tamiz N 200: "))
+      
+      if d < 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARCILLA LIMOSA (CL-ML) ")
+
+      elif d >= 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARCILLA LIMOSA ARENOSA (CL-ML) ")
+           
+    elif IP > 7:
+      print("Ingrese porcentaje de suelo que pasa Tamiz N 200 para continuar clasificación: ")
+        
+      #Porcentaje de suelo que pasa Tamiz N 200 (%)
+      d = int(input("Porcentaje de suelo que pasa Tamiz N 200: "))
+      
+      if d < 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARCILLA LIGERA (CL) ")
+           
+      elif d >= 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARCILLA LIGERA ARENOSA (CL) ")
+           
+           
+  elif LL >= 50:
+     print("Indique si IP se encuentra 'Sobre' o 'abajo' de la linea A introduciendo '1' o '0' respectivamente: ")
+     
+     IP = "Indice de plasticidad (%)"
+     PIP = "Posición de IP en la curva granulomètrica"
+     PIP = int(input("¿IP 'Sobre' o 'abajo' de la linea A?: "))
+     
+     if PIP == 1:
+       print("Ingrese porcentaje de suelo que pasa Tamiz N 200 para continuar clasificación: ")
+      
+       d = "Porcentaje de suelo que pasa Tamiz N 200 (%)"
+       d = int(input("Porcentaje de suelo que pasa Tamiz N 200: "))
+       
+       if d < 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARCILLA DENSA (CH) ")
+           
+       elif d >= 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE ARCILLA DENSA ARENOSA (CH) ")
+
+     elif PIP == 0:
+       print("Ingrese porcentaje de suelo que pasa Tamiz N 200 para continuar clasificación: ")
+
+       d = "Porcentaje de suelo que pasa Tamiz N 200 (%)"
+       d = int(input("Porcentaje de suelo que pasa Tamiz N 200: "))
+       
+       if d < 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE LIMO ELÁSTICO (MH) ")
+           
+       elif d >= 30:
+           print("EL SUELO CORRESPONDE A UN TIPO DE SUELO DE LIMO ELÁSTICO ARENOSO (CH) ") 
