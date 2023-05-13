@@ -1,0 +1,43 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+  
+# create data
+x = np.array([20,100])
+y = np.array([0,59])
+
+x1 = np.array([0,60])
+y1 = np.array([0,60])
+
+x2 = np.array([50,50])
+y2 = np.array([0,60])
+
+x3 = np.array([4,25])
+y3 = np.array([4,4])
+
+x4 = np.array([7,29])
+y4 = np.array([7,7])
+
+w =  np.array([])
+z = np.array([0])
+
+
+# plt.figure(figsize=(25, 12))
+# plot lines
+
+plt.plot(x, y, label = "Linea A")
+plt.plot(x1, y1, linestyle='--', label = "Linea U")
+plt.plot(x2, y2, label = "Linea B")
+plt.plot(x3, y3)
+plt.plot(x4, y4)
+
+
+plt.title("Carta de plasticidad",fontsize=10)
+plt.xlabel("LIMITE LIQUIDO (LL)",fontsize=10)
+plt.ylabel("INDICE DE PLASTICIDAD (IP)",fontsize=10)
+
+plt.scatter(1, 0)
+
+plt.legend()
+plt.grid(color='c', linestyle='dotted', linewidth=0.5)
+plt.show()
